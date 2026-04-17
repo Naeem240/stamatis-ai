@@ -1,14 +1,15 @@
 import Hero from "./components/sections/Hero";
-import Navbar from "./components/sections/Navbar";
+import Investors from "./components/sections/Investors";
 import Platform from "./components/sections/Platform";
+import Team from "./components/sections/Team";
 
 export default function HomePage() {
   return (
     <main className="min-h-screen">
-      <Navbar />
       <Hero />
       <Platform />
-      {/* Step 3: We will add PlatformSection and TeamSection here */}
+      <Team/>
+      <Investors/>
     </main>
   );
 }

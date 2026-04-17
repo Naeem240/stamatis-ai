@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Fade } from "react-awesome-reveal";
 
 export default function Hero() {
@@ -37,12 +38,12 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <button className="px-8 py-4 rounded-lg bg-gradient-to-br from-gold to-gold-light text-navy-900 font-bold hover:translate-y-[-2px] transition-transform">
+            <Link href="/request-demo" className="px-8 py-4 rounded-lg bg-gradient-to-br from-gold to-gold-light text-navy-900 font-bold hover:translate-y-[-2px] transition-transform">
               Request a Demo 
-            </button>
-            <button className="px-8 py-4 rounded-lg border border-white/20 font-semibold hover:bg-white/5 transition-colors">
+            </Link>
+            <Link href="/platform" className="px-8 py-4 rounded-lg border border-white/20 font-semibold hover:bg-white/5 transition-colors">
               View Platform 
-            </button>
+            </Link>
           </div>
         </Fade>
       </div>

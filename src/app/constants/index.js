@@ -21,3 +21,83 @@ export const LOCUS_MODULES = [
   { name: "Locus.Spine", diseases: "Spinal AI", status: "Roadmap", color: "#8899BB", icon: "🦴" },
   { name: "Locus.Pancreas", diseases: "Pancreatic AI", status: "Roadmap", color: "#8899BB", icon: "🧬" },
 ];
+
+export const TEAM = [
+  { name: "S. Stamatis", role: "Founder & CEO", detail: "Vision & Strategy" },
+  { name: "N. Naeem", role: "Lead Frontend Developer", detail: "Platform Architecture" },
+  { name: "Dr. A. Vance", role: "Chief Medical Officer", detail: "Clinical Validation" },
+  { name: "M. Chen", role: "Head of AI Research", detail: "Neural Networks" },
+];
+
+export const INVESTOR_STATS = [
+  { label: "Status", value: "Series A", sub: "Funding Round" },
+  { label: "IP Portfolio", value: "Patent Pending", sub: "US 19/200,539" },
+  { label: "Partners", value: "Harvard LOA", sub: "Institutional Support" },
+];
+
+export const BLOG_POSTS = [
+  {
+    slug: "probabilistic-masking-ai-compute", // For the URL: /blog/probabilistic-masking-ai-compute
+    tag: "Technology",
+    title: "How Probabilistic Masking Reduces AI Compute by 91%",
+    date: "April 2026",
+    // We will pass an image placeholder structure here
+    imagePlaceholder: { bg: "bg-medical-blue/20", icon: "⚡" }, 
+  },
+  {
+    slug: "community-hospitals-case-study",
+    tag: "Go-to-Market",
+    title: "The Case for Starting with Community Hospitals",
+    date: "March 2026",
+    imagePlaceholder: { bg: "bg-gold/10", icon: "🏥" },
+  },
+  {
+    slug: "detection-vs-diagnosis-matters",
+    tag: "Clinical",
+    title: "Detection vs. Diagnosis: Why the Distinction Matters",
+    date: "March 2026",
+    imagePlaceholder: { bg: "bg-medical-green/10", icon: "🩺" },
+  },
+  {
+    slug: "harvard-loa-clinical-validation",
+    tag: "Partnerships",
+    title: "What Our Harvard LOA Means for Clinical Validation",
+    date: "February 2026",
+    imagePlaceholder: { bg: "bg-medical-blue/10", icon: "🎓" },
+  },
+];
+
+export const JOBS = [
+  {
+    slug: "senior-radiology-ai-researcher",
+    title: "Senior Radiology AI Researcher",
+    type: "Full-Time",
+    location: "Remote",
+    department: "Engineering",
+    description: "Lead our efforts in refining Locus.Brain diagnostics using advanced probabilistic masking.",
+  },
+  {
+    slug: "clinical-implementation-specialist",
+    title: "Clinical Implementation Specialist",
+    type: "Full-Time",
+    location: "Texas",
+    department: "Clinical Operations",
+    description: "Bridge the gap between our AI engine and hospital radiology workflows.",
+  },
+  {
+    slug: "healthcare-sales-executive",
+    title: "Healthcare Sales Executive",
+    type: "Contract",
+    location: "Remote",
+    department: "Growth",
+    description: "Drive adoption of the Stamatis Engine across regional medical centers.",
+  },
+  {
+    slug: "fhir-hl7-integration-engineer",
+    title: "FHIR / HL7 Integration Engineer",
+    type: "Full-Time",
+    location: "Remote",
+    department: "Engineering",
+    description: "Ensure seamless PACS and EHR integration for surgical precision data.",
+  },
+];
