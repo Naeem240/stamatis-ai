@@ -5,7 +5,7 @@ import Team from "./components/sections/Team";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-surface-strong transition-colors duration-300">
       <Hero />
       <Platform />
       <Team/>

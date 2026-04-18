@@ -3,48 +3,132 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Fade } from "react-awesome-reveal";
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
+};
+
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center px-8 md:px-16 overflow-hidden pt-20">
-      {/* Background Grid Pattern [cite: 112, 115] */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
-           style={{ backgroundImage: `linear-gradient(#C9A94E 1px, transparent 1px), linear-gradient(90deg, #C9A94E 1px, transparent 1px)`, backgroundSize: '60px 60px' }} />
-      
-      {/* Radial Glow [cite: 118] */}
-      <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-gold/5 blur-[120px] rounded-full pointer-events-none" />
-
-      <div className="relative max-w-4xl z-10">
-        <Fade cascade damping={0.1} triggerOnce>
-          <div className="flex gap-3 mb-6">
-            <span className="px-3 py-1 rounded-full bg-gold/10 border border-gold/30 text-[10px] font-bold text-gold uppercase tracking-widest">
-              Patent Pending US 19/200,539
-            </span>
-            <span className="px-3 py-1 rounded-full bg-medical-blue/10 border border-medical-blue/30 text-[10px] font-bold text-medical-blue uppercase tracking-widest">
-              Harvard LOA Signed 
-            </span>
+    <section className="relative min-h-screen flex flex-col justify-center px-4 sm:px-8 md:px-16 overflow-hidden pt-28 pb-16 bg-surface-strong transition-colors duration-300">
+      {/* Background gradient with subtle brand accent */}
+      <div className="absolute inset-0 z-0 ">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 dark:bg-primary/5 blur-[120px] rounded-full" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary/4 dark:bg-secondary/4 blur-[100px] rounded-full" />
+      </div>
+      {/* Full-width Background Image behind Headline */}
+          <div className="fixed inset-0 z-0 border opacity-60 blur-xs">
+            <img 
+              src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=1600&h=1000&fit=crop" 
+              alt="MRI Machine Background" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-surface-strong/60 via-transparent to-surface-strong" />
           </div>
 
-          <h1 className="font-playfair text-5xl md:text-7xl font-bold leading-[1.1] mb-6 text-white tracking-tighter">
+      <div className="relative max-w-6xl z-10 mx-auto w-full  text-center sm:text-left">
+        <Fade cascade damping={0.08} triggerOnce>
+          {/* Certification Badges */}
+          <motion.div 
+            variants={itemVariants} 
+            className="flex flex-col items-center sm:flex-row gap-2 mb-8 sm:mb-10"
+          >
+            <span className="inline-block w-fit px-3 py-1.5 rounded-full bg-primary/12 border border-primary/25 text-[10px] font-bold text-primary uppercase tracking-[0.15em]">
+              🔒 Patent Pending US 19/200,539
+            </span>
+            <span className="inline-block w-fit px-3 py-1.5 rounded-full bg-secondary/12 border border-secondary/25 text-[10px] font-bold text-secondary uppercase tracking-[0.15em]">
+              ✓ Harvard Clinical Partnership
+            </span>
+          </motion.div>
+
+          
+
+          {/* Main Headline */}
+          <motion.h1 
+            variants={itemVariants}
+            className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold leading-[1.05] mb-6 sm:mb-8 text-text-primary dark:text-white tracking-tight max-w-5xl relative z-10"
+          >
             AI That Doesn't Just <br />
-            <span className="text-gold italic">Detect Disease.</span> <br />
-            It Diagnoses It. 
-          </h1>
+            <span className="text-[#C9A94E] italic">Detect Disease.</span> <br />
+            It Diagnoses It.
+          </motion.h1>
 
-          <div className="w-12 h-1 bg-gold mb-8" /> 
+          {/* Subtitle with key metric */}
+          <motion.p 
+            variants={itemVariants}
+            className="font-dmSans text-lg sm:text-xl md:text-2xl text-text-secondary dark:text-medical-slate max-w-3xl mb-8 sm:mb-12 leading-relaxed"
+          >
+            AI-powered full-body analysis with <span className="text-primary font-bold">96.47% diagnostic accuracy</span> in under 15 seconds. Trusted by leading healthcare institutions.
+          </motion.p>
 
-          <p className="font-dmSans text-lg md:text-xl text-medical-slate max-w-xl mb-10 leading-relaxed">
-            Stamatis.AI is a patent-protected full-body AI diagnostic platform. 
-            Providing surgical precision through medical intelligence. 
-          </p>
+          {/* Key Stats Row */}
+          <motion.div 
+            variants={itemVariants}
+            className="grid grid-cols-3 gap-4 sm:gap-8 mb-10 sm:mb-14 max-w-2xl"
+          >
+            <div className="border-l-2 border-primary pl-4">
+              <p className="text-2xl sm:text-3xl font-bold text-text-primary dark:text-white">96.47%</p>
+              <p className="text-xs sm:text-sm text-text-secondary dark:text-medical-slate mt-1">Accuracy</p>
+            </div>
+            <div className="border-l-2 border-secondary pl-4">
+              <p className="text-2xl sm:text-3xl font-bold text-text-primary dark:text-white">&lt;15s</p>
+              <p className="text-xs sm:text-sm text-text-secondary dark:text-medical-slate mt-1">Analysis Time</p>
+            </div>
+            <div className="border-l-2 border-accent-blue pl-4">
+              <p className="text-2xl sm:text-3xl font-bold text-text-primary dark:text-white">6</p>
+              <p className="text-xs sm:text-sm text-text-secondary dark:text-medical-slate mt-1">Organ Systems</p>
+            </div>
+          </motion.div>
 
-          <div className="flex flex-wrap gap-4">
-            <Link href="/request-demo" className="px-8 py-4 rounded-lg bg-gradient-to-br from-gold to-gold-light text-navy-900 font-bold hover:translate-y-[-2px] transition-transform">
-              Request a Demo 
-            </Link>
-            <Link href="/platform" className="px-8 py-4 rounded-lg border border-white/20 font-semibold hover:bg-white/5 transition-colors">
-              View Platform 
-            </Link>
-          </div>
+          {/* CTA Buttons */}
+          <motion.div 
+            variants={itemVariants}
+            className="flex flex-col sm:flex-row gap-4 w-fit"
+          >
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <Link 
+                href="/request-demo" 
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-br from-primary to-primary/80 text-navy-900 font-bold hover:shadow-xl transition-all duration-300 text-base sm:text-lg"
+              >
+                Schedule Demo
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <Link 
+                href="/platform" 
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border border-primary/30 dark:border-primary/20 font-semibold text-text-primary dark:text-white hover:bg-primary/5 dark:hover:bg-primary/10 transition-all duration-300 text-base sm:text-lg"
+              >
+                Explore Platform
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </motion.div>
+          </motion.div>
         </Fade>
       </div>
     </section>

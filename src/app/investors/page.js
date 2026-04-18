@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function InvestorsPage() {
   return (
-    <main className="pt-20">
+    <main className="pt-16 sm:pt-20 bg-surface-strong transition-colors duration-300">
       <Investors />
     </main>
   );

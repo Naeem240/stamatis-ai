@@ -23,10 +23,10 @@ export const LOCUS_MODULES = [
 ];
 
 export const TEAM = [
-  { name: "S. Stamatis", role: "Founder & CEO", detail: "Vision & Strategy" },
-  { name: "N. Naeem", role: "Lead Frontend Developer", detail: "Platform Architecture" },
-  { name: "Dr. A. Vance", role: "Chief Medical Officer", detail: "Clinical Validation" },
-  { name: "M. Chen", role: "Head of AI Research", detail: "Neural Networks" },
+  { name: "Lucas Lee Stamatis", role: "Chief Executive Officer", detail: "Leads company strategy and commercial rollout across hospital systems." },
+  { name: "Saj Khan", role: "Co-Founder & CTO", detail: "Co-inventor of US Patent 19/200,539. Architect of the 3-stage probabilistic masking pipeline." },
+  { name: "Muhammad H. Mustafa", role: "Lead ML Engineer", detail: "Built the data lake, LLM encoder, and Vast.ai training pipeline." },
+  { name: "Dr. Rao K. Ali, MD", role: "Chief Medical Officer", detail: "Board Certified Interventional Pain Specialist. CEO of Premier Pain Centers across 13 Texas locations." },
 ];
 
 export const INVESTOR_STATS = [

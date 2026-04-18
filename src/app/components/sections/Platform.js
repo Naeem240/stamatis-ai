@@ -3,84 +3,150 @@ import { motion } from "framer-motion";
 import { Fade } from "react-awesome-reveal";
 import { LOCUS_MODULES } from "@/app/constants";
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
 export default function Platform() {
   return (
-    <section id="platform" className="py-24 px-8 md:px-16 border-t border-white/5 bg-[#070F1C]">
-      <div className="max-w-6xl mx-auto">
-        <Fade triggerOnce>
-          <span className="inline-block px-3 py-1 rounded-full bg-[#C9A94E]/10 border border-[#C9A94E]/30 text-[11px] font-bold text-[#C9A94E] uppercase tracking-widest mb-4">
+    <section id="platform" className="py-10 sm:py-10 px-4 sm:px-8 md:px-16 border-t border-surface dark:border-white/5 bg-surface-strong transition-colors duration-300 backdrop-brightness-10">
+      <div className=" max-w-6xl mx-auto">
+        <Fade triggerOnce direction="up">
+          <span className="inline-block px-3 py-1 rounded-full bg-primary/10 border border-primary/30 text-[11px] font-bold text-primary uppercase tracking-widest mb-4">
             The Platform
           </span>
-          <h2 className="font-playfair text-4xl md:text-5xl mb-12 text-white">
-            One Engine. <span className="text-[#C9A94E] italic">Six Organ Systems.</span>
+          <h2 className="font-playfair text-4xl md:text-5xl mb-12 text-text-primary dark:text-white">
+            One Engine. <span className="text-primary italic">Six Organ Systems.</span>
           </h2>
         </Fade>
 
         {/* Engine Architecture Visualization */}
-        <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-8 md:p-12 mb-16 backdrop-blur-sm relative overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center relative z-10">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true, margin: "-100px" }}
+          className="bg-surface border border-surface dark:border-white/10 rounded-2xl p-6 sm:p-8 md:p-12 mb-12 sm:mb-16 backdrop-blur-sm relative overflow-hidden transition-colors duration-300"
+        >
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-12 items-center relative z-10">
             
             {/* Input Phase */}
-            <div className="space-y-4">
-              <span className="text-[10px] font-bold text-[#4A90D9] uppercase tracking-widest">01. Input Source</span>
-              <div className="p-6 rounded-xl bg-[#4A90D9]/10 border border-[#4A90D9]/20">
-                <p className="text-sm text-gray-300 font-mono leading-relaxed">
+            <motion.div variants={itemVariants} className="space-y-4">
+              <span className=" text-[14px] font-bold text-accent-blue uppercase tracking-widest">01. Input Source</span>
+              <motion.div 
+                whileHover={{ scale: 1.05 }}
+                className="p-6 mt-4 rounded-xl bg-accent-blue/10 border border-accent-blue/20 hover:border-accent-blue/40 transition-all duration-300 cursor-default overflow-hidden"
+              >
+                <img 
+                  src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=400&h=300&fit=crop" 
+                  alt="Brain MRI Scan" 
+                  className="w-full h-auto rounded-lg mb-4 object-cover max-h-[200px]"
+                />
+                <p className="text-sm text-text-secondary dark:text-gray-300 font-mono leading-relaxed">
                   3D MRI or CT scan <br /> (NIfTI / DICOM)
                 </p>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
-            {/* Central Engine Logic (The Patent-Pending Part) */}
-            <div className="flex flex-col gap-4">
-              <span className="text-[10px] font-bold text-[#C9A94E] uppercase tracking-widest text-center">02. Stamatis Engine</span>
+            {/* Central Engine Logic */}
+            <motion.div variants={itemVariants} className="flex flex-col gap-4">
+              <span className="text-[10px] font-bold text-primary uppercase tracking-widest text-center">02. Stamatis Engine</span>
               {[
                 { label: "Probabilistic Masking", claim: "Claims 1-4", color: "#4A90D9" },
                 { label: "Multimodal Embedding", claim: "Claims 5-8", color: "#C9A94E" },
                 { label: "RL Feedback Loop", claim: "Claims 13-16", color: "#5DB8A0" }
               ].map((step) => (
-                <div key={step.label} className="p-4 rounded-lg bg-white/5 border border-white/10 flex justify-between items-center group hover:border-[#C9A94E]/40 transition-colors">
+                <motion.div 
+                  key={step.label}
+                  whileHover={{ x: 4 }}
+                  className="p-4 rounded-lg bg-surface-soft border border-surface dark:border-white/10 flex justify-between items-center group hover:border-primary/40 transition-colors duration-300 cursor-default"
+                >
                   <div>
-                    <p className="text-sm font-bold text-white">{step.label}</p>
-                    <p className="text-[10px] text-gray-500 font-mono">{step.claim}</p>
+                    <p className="text-sm font-bold text-text-primary dark:text-white">{step.label}</p>
+                    <p className="text-[10px] text-text-tertiary dark:text-gray-500 font-mono">{step.claim}</p>
                   </div>
-                  <div className="w-2 h-2 rounded-full" style={{ backgroundColor: step.color }} />
-                </div>
+                  <motion.div 
+                    className="w-2 h-2 rounded-full" 
+                    style={{ backgroundColor: step.color }}
+                    animate={{ scale: [1, 1.2, 1] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                  />
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
 
             {/* Output Phase */}
-            <div className="space-y-4">
-              <span className="text-[10px] font-bold text-[#C9A94E] uppercase tracking-widest">03. Diagnostic Output</span>
-              <div className="p-6 rounded-xl bg-[#C9A94E]/10 border border-[#C9A94E]/20">
-                <ul className="text-xs text-gray-300 space-y-2 font-mono">
-                  <li className="flex justify-between"><span>Confirmed Condition</span> <span className="text-white">ICD-10</span></li>
-                  <li className="flex justify-between"><span>Severity Volume</span> <span className="text-white">cm³</span></li>
-                  <li className="flex justify-between"><span>Confidence Score</span> <span className="text-[#5DB8A0]">96.4%</span></li>
+            <motion.div variants={itemVariants} className="space-y-4">
+              <span className="text-[10px] font-bold text-primary uppercase tracking-widest">03. Diagnostic Output</span>
+              <motion.div 
+                whileHover={{ scale: 1.05 }}
+                className="p-6 rounded-xl bg-primary/10 border border-primary/20 hover:border-primary/40 transition-all duration-300 cursor-default"
+              >
+                <ul className="text-xs text-text-secondary dark:text-gray-300 space-y-2 font-mono">
+                  <li className="flex justify-between"><span>Confirmed Condition</span> <span className="text-text-primary dark:text-white">ICD-10</span></li>
+                  <li className="flex justify-between"><span>Severity Volume</span> <span className="text-text-primary dark:text-white">cm³</span></li>
+                  <li className="flex justify-between"><span>Confidence Score</span> <span className="text-secondary">96.4%</span></li>
                 </ul>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Locus Modules Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
+        >
           {LOCUS_MODULES.map((mod) => (
             <motion.div 
               key={mod.name}
-              whileHover={{ y: -8, backgroundColor: "rgba(255,255,255,0.06)", borderColor: "rgba(201,169,78,0.3)" }}
-              className="p-8 rounded-xl bg-white/[0.03] border border-white/10 transition-all cursor-default relative overflow-hidden group"
+              variants={itemVariants}
+              whileHover={{ y: -8 }}
+              className="p-6 sm:p-8 rounded-xl bg-surface dark:bg-white/[0.03] border border-surface dark:border-white/10 transition-all duration-300 cursor-default relative overflow-hidden group hover:border-primary/30"
             >
-              <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">{mod.icon}</div>
-              <h3 className="font-playfair text-xl font-bold mb-1 text-white">{mod.name}</h3>
-              <p className="text-[#8899BB] text-sm mb-6">{mod.diseases}</p>
-              <span className={`text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter ${
-                mod.status === "In Development" ? "bg-[#4A90D9]/20 text-[#4A90D9]" : "bg-white/10 text-[#8899BB]"
+              {/* Gradient background on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              
+              <motion.div 
+                className="text-3xl sm:text-4xl mb-6 relative z-10"
+                animate={{ y: [0, -4, 0] }}
+                transition={{ duration: 3, repeat: Infinity }}
+              >
+                {mod.icon}
+              </motion.div>
+              
+              <h3 className="font-playfair text-lg sm:text-xl font-bold mb-1 text-text-primary dark:text-white relative z-10">
+                {mod.name}
+              </h3>
+              <p className="text-text-secondary dark:text-medical-slate text-sm mb-6 relative z-10">{mod.diseases}</p>
+              <span className={`text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter relative z-10 inline-block ${
+                mod.status === "In Development" 
+                  ? "bg-accent-blue/20 text-accent-blue dark:bg-accent-blue/20 dark:text-accent-blue" 
+                  : "bg-gray-200 dark:bg-white/10 text-text-secondary dark:text-medical-slate"
               }`}>
                 {mod.status}
               </span>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
