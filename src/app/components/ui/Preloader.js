@@ -5,22 +5,15 @@ import { useState, useEffect } from "react";
 
 export default function Preloader() {
   const [loading, setLoading] = useState(true);
-  const [progress, setProgress] = useState(0);
+  // const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    // Simulate a loading sequence
-    const interval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          clearInterval(interval);
-          setTimeout(() => setLoading(false), 500);
-          return 100;
-        }
-        return prev + 1;
-      });
-    }, 20);
+    // Simulate loading progress (for demo purposes)
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 400); // Adjust duration as needed
 
-    return () => clearInterval(interval);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -61,19 +54,10 @@ export default function Preloader() {
             <p className="font-playfair text-white text-xl font-bold tracking-widest mb-2">
               STAMATIS<span className="text-[#C9A94E]">.AI</span>
             </p>
-            <p className="font-mono text-[10px] text-[#8899BB] uppercase tracking-[0.3em]">
-              Initializing Diagnostic Engine... {progress}%
-            </p>
+            
           </div>
 
-          {/* Progress Bar Container */}
-          <div className="w-48 h-[2px] bg-white/5 mt-6 relative overflow-hidden">
-            <motion.div
-              className="absolute left-0 top-0 h-full bg-[#C9A94E]"
-              initial={{ width: "0%" }}
-              animate={{ width: `${progress}%` }}
-            />
-          </div>
+          
         </motion.div>
       )}
     </AnimatePresence>

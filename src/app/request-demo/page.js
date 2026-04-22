@@ -4,11 +4,12 @@ import { Fade } from "react-awesome-reveal";
 import { METRICS } from "@/app/constants";
 import { useFormSubmit } from "../hooks/useFormSubmit";
 import { motion } from "framer-motion";
+import CountUpNumber from "../components/ui/CountUpNumber";
 
 export default function RequestDemoPage() {
   const [submitted, setSubmitted] = useState(false);
 
-  const [state, handleSubmit] = useFormSubmit("xlgabvlr");
+  const [state, handleSubmit] = useFormSubmit("mvzdwvzb");
 
 
   return (
@@ -31,21 +32,33 @@ export default function RequestDemoPage() {
             </p>
 
             <div className="grid grid-cols-2 gap-6 border-t border-gray-200 dark:border-white/10 pt-10">
-              {METRICS.slice(0, 2).map((stat, i) => (
-                <motion.div 
-                  key={i}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1 }}
-                >
-                  <p className="text-xl sm:text-2xl font-bold text-text-primary dark:text-white font-playfair">
-                    {stat.value}
-                  </p>
-                  <p className="text-[10px] text-primary uppercase tracking-widest mt-1">
-                    {stat.label}
-                  </p>
-                </motion.div>
-              ))}
+              {METRICS.slice(0, 2).map((stat, i) => {
+                // Parse the value to extract number and suffix
+                const isPercentage = stat.value.includes('%');
+                const isTime = stat.value.includes('s');
+                let numValue = parseFloat(stat.value);
+
+                return (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.1 }}
+                  >
+                    <p className="text-xl sm:text-2xl font-bold text-text-primary dark:text-white font-playfair">
+                      <CountUpNumber
+                        end={numValue}
+                        decimals={isPercentage ? 2 : 0}
+                        duration={2.5}
+                        suffix={isPercentage ? '%' : isTime ? 's' : ''}
+                      />
+                    </p>
+                    <p className="text-[10px] text-primary uppercase tracking-widest mt-1">
+                      {stat.label}
+                    </p>
+                  </motion.div>
+                );
+              })}
             </div>
           </Fade>
         </div>

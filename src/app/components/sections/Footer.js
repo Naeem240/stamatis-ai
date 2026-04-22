@@ -27,7 +27,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-surface backdrop-brightness-10 border-t border-surface dark:border-white/5 pt-16 sm:pt-20 pb-8 sm:pb-10 px-4 sm:px-8 md:px-16 transition-colors duration-300">
+    <footer className="bg-surface-strong backdrop-brightness-10 border-t border-surface dark:border-white/5 pt-16 sm:pt-20 pb-8 sm:pb-10 px-4 sm:px-8 md:px-16 transition-colors duration-300">
       <div className="max-w-6xl mx-auto">
         <motion.div 
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 mb-12 sm:mb-16"
@@ -40,17 +40,15 @@ export default function Footer() {
           {/* Brand Column */}
           <motion.div variants={itemVariants} className="md:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-6 hover:opacity-80 transition-opacity">
-              <div className="relative w-8 h-8">
-                <Image src="/logo.png" alt="Stamatis.AI" fill className="object-contain" />
-              </div>
+              
               <span className="font-playfair text-xl font-bold text-text-primary dark:text-white">
-                Stamatis<span className="text-primary">.AI</span>
+                STAMATIS<span className="text-primary">.AI</span>
               </span>
             </Link>
             <p className="text-text-secondary dark:text-medical-slate text-sm max-w-sm leading-relaxed mb-6 font-dmSans">
               Cornerstone Eagle LLC · Texas LLC <br />
               Patent Pending US 19/200,539 <br />
-              Building the future of surgical precision through AI.
+              Patent-protected, multi-organ diagnostic AI. Built for clinical scale
             </p>
           </motion.div>
 

@@ -1,4 +1,6 @@
-import Investors from "../components/sections/Investors";
+import { InvestorPage } from "../components/sections/InvestorPage";
+
+
 
 export const metadata = {
   title: "Investor Relations | Stamatis.AI",
@@ -7,8 +9,6 @@ export const metadata = {
 
 export default function InvestorsPage() {
   return (
-    <main className="pt-16 sm:pt-20 bg-surface-strong transition-colors duration-300">
-      <Investors />
-    </main>
+    <InvestorPage />
   );
 }

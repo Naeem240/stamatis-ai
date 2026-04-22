@@ -36,7 +36,7 @@ export default function Navbar() {
 
       {/* Brand Logo */}
       <Link href="/" className="flex items-center gap-1 z-[110]">
-        <div className="relative w-10 h-10 transition-transform duration-300 hover:scale-105">
+        {/* <div className="relative w-10 h-10 transition-transform duration-300 hover:scale-105">
           <Image
             src="/logo.png"
             alt="Stamatis.AI Logo"
@@ -44,9 +44,9 @@ export default function Navbar() {
             className="object-contain"
             priority
           />
-        </div>
+        </div> */}
         <span className="font-playfair text-xl font-bold tracking-tight text-text-primary dark:text-white">
-          Stamatis<span className="text-[#A67C3D]">.AI</span>
+          STAMATIS<span className="text-[#A67C3D]">.AI</span>
         </span>
       </Link>
 

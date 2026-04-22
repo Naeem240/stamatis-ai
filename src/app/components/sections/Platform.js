@@ -67,9 +67,9 @@ export default function Platform() {
             <motion.div variants={itemVariants} className="flex flex-col gap-4">
               <span className="text-[10px] font-bold text-primary uppercase tracking-widest text-center">02. Stamatis Engine</span>
               {[
-                { label: "Probabilistic Masking", claim: "Claims 1-4", color: "#4A90D9" },
-                { label: "Multimodal Embedding", claim: "Claims 5-8", color: "#C9A94E" },
-                { label: "RL Feedback Loop", claim: "Claims 13-16", color: "#5DB8A0" }
+                { label: "Probabilistic Masking", claim: "", color: "#4A90D9" },
+                { label: "Multimodal Embedding", claim: "", color: "#C9A94E" },
+                { label: "RL Feedback Loop", claim: "", color: "#5DB8A0" }
               ].map((step) => (
                 <motion.div 
                   key={step.label}
