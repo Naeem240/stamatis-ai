@@ -90,7 +90,7 @@ export default function Navbar() {
           </motion.div>
         </button>
         
-        <Link href="/request-demo" className="px-6 py-3 rounded-lg bg-gradient-to-br from-primary to-gold-light text-navy-900 font-bold hover:shadow-lg transition-all duration-300 hover:scale-105">
+        <Link href="/request-demo" className="px-6 py-3 rounded-lg bg-[#C9A94E] text-black font-bold hover:shadow-lg transition-all duration-300 hover:scale-105">
           Request Demo
         </Link>
       </div>
@@ -172,7 +172,7 @@ export default function Navbar() {
                 <div className="h-[1px] bg-gray-200 dark:bg-white/10 w-full my-4" />
                 
                 {/* Request Demo Button */}
-                <Link href="/request-demo" className="w-full p-4 rounded-lg bg-gradient-to-br from-primary to-gold-light text-navy-900 font-bold text-center hover:shadow-lg transition-all duration-300 mb-4">
+                <Link href="/request-demo" className="w-full p-4 rounded-lg bg-[#C9A94E] text-black font-bold text-center hover:shadow-lg transition-all duration-300 mb-5">
                   Request Demo
                 </Link>
               </div>

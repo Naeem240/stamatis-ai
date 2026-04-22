@@ -195,12 +195,12 @@ export const InvestorPage = () => {
                 variants={itemVariants}
                 className="bg-white/5 border border-secondary/20 rounded-xl p-6 hover:border-secondary/40 transition-colors"
               >
-                <div className="w-12 h-12 bg-secondary/15 rounded-lg flex items-center justify-center mb-4">
+                <div className="bg-secondary/15 rounded-lg flex items-center justify-center mb-4">
                   <span className="text-secondary text-xl">{card.icon}</span>
                 </div>
                 <div className="text-xs font-bold uppercase tracking-wider text-secondary mb-3">{card.status}</div>
                 <h3 className="text-lg font-semibold mb-3">{card.title}</h3>
-                <p className="text-white/70 text-sm leading-relaxed">{card.desc}</p>
+                <p className="text-text-primary dark:text-white text-sm leading-relaxed">{card.desc}</p>
               </motion.div>
             ))}
           </motion.div>

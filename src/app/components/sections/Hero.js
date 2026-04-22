@@ -116,7 +116,7 @@ export default function Hero() {
             >
               <Link
                 href="/request-demo"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-br from-primary to-primary/80 text-navy-900 font-bold hover:shadow-xl transition-all duration-300 text-base sm:text-lg"
+                className="border inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-br from-primary to-primary/80 text-navy-900 font-bold hover:shadow-xl transition-all duration-300 text-base sm:text-lg"
               >
                 Schedule Demo
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -130,7 +130,7 @@ export default function Hero() {
             >
               <Link
                 href="/platform"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border border-primary/30 dark:border-primary/20 font-semibold text-text-primary dark:text-white hover:bg-primary/5 dark:hover:bg-primary/10 transition-all duration-300 text-base sm:text-lg"
+                className="bg-[#C9A94E] text-black inline-flex items-center gap-2 px-8 py-4 rounded-xl border-primary/30 dark:border-primary/20 font-semibold text-text-primary dark:text-white hover:bg-primary/5 dark:hover:bg-primary/10 transition-all duration-300 text-base sm:text-lg"
               >
                 Explore Platform
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
