@@ -23,10 +23,31 @@ export const LOCUS_MODULES = [
 ];
 
 export const TEAM = [
-  { name: "Lucas Lee Stamatis", role: "Chief Executive Officer", detail: "Leads company strategy and commercial rollout across hospital systems." },
-  { name: "Sajed Khan", role: "Co-Founder & CTO", detail: "Co-inventor of US Patent 19/200,539. Architect of the 3-stage probabilistic masking pipeline." },
-  // { name: "Muhammad H. Mustafa", role: "Lead ML Engineer", detail: "Built the data lake, LLM encoder, and Vast.ai training pipeline." },
-  { name: "Dr. Rao K. Ali, MD", role: "Chief Medical Officer", detail: "Board Certified Interventional Pain Specialist. CEO of Premier Pain Centers across 13 Texas locations." },
+  {
+    name: "Lucas Lee Stamatis",
+    role: "Chief Executive Officer",
+    detail: "Serial entrepreneur and SMU-trained finance professional with a track record across private healthcare and pharmacy ventures. Leads Stamatis.AI’s commercial strategy and hospital system partnerships, bringing institutional-grade financial discipline to one of the most capital-intensive sectors in tech.",
+    img: "/lucas.png"
+  },
+  {
+    name: "Sajed Khan",
+    role: "Co-Founder & CTO",
+    detail: "Security architect and CISO with deep expertise in HIPAA compliance, healthcare data infrastructure, and enterprise risk management. Co-inventor of US Patent 19/200,539. Architected Stamatis.AI’s 3-stage probabilistic masking pipeline with security and clinical-grade data integrity built in from the ground up.",
+    img: "/sajed.jpeg"
+  },
+  // { name: "Muhammad H. Mustafa", role: "Lead ML Engineer", detail: "Built the data lake, LLM encoder, and Vast.ai training pipeline.", img: null },
+  {
+    name: "Dr. Rao K. Ali, MD",
+    role: "Chief Medical Officer",
+    detail: "Board Certified Interventional Pain Specialist. CEO of Premier Pain Centers across 13 Texas locations.",
+    img: null
+  },
+  {
+    name: "Aviraj (Avi) Sinha, PhD",
+    role: "Co-Founder & Chief Data Scientist",
+    detail: "PhD in AI, machine learning, and quantum computing from Southern Methodist University. Co-inventor of US Patent 19/200,539. Leads the model architecture and validation strategy behind Stamatis.AI’s diagnostic engine — combining classical deep learning with next-generation computational methods to set a new standard for clinical AI performance.",
+    img: null
+  },
 ];
 
 export const INVESTOR_STATS = [

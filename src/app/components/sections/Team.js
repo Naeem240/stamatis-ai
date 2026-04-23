@@ -48,23 +48,29 @@ export default function Team() {
               whileHover={{ y: -8 }}
               className="group cursor-default"
             >
-              {/* Image Placeholder Container */}
+              {/* Image or Placeholder Container */}
               <motion.div 
                 className="relative aspect-[3/4] mb-6 overflow-hidden bg-surface border border-surface dark:border-white/10 rounded-sm group-hover:border-primary/40 transition-all duration-300"
                 whileHover={{ scale: 1.02 }}
               >
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-40 group-hover:opacity-60 transition-opacity duration-300" />
-                
                 {/* Image Placeholder Background */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent" />
-                
-                {/* Placeholder initials or icon */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-5xl font-playfair font-bold text-primary/20">
-                    {member.name.charAt(0)}
-                  </span>
-                </div>
+                {/* Show image if available, else show initial */}
+                {member.img ? (
+                  <img
+                    src={member.img}
+                    alt={member.name}
+                    className="absolute inset-0 w-full h-full object-cover object-center z-10"
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center z-10">
+                    <span className="text-5xl font-playfair font-bold text-primary/20">
+                      {member.name.charAt(0)}
+                    </span>
+                  </div>
+                )}
               </motion.div>
 
               {/* Member Info */}

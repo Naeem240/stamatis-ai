@@ -58,6 +58,14 @@ export default function Footer() {
               Platform
             </h4>
             <ul className="space-y-4">
+              <li >
+                  <Link 
+                    href={`/`} 
+                    className="text-text-secondary dark:text-medical-slate hover:text-primary dark:hover:text-primary text-sm transition-colors duration-300 font-dmSans"
+                  >
+                    Home
+                  </Link>
+                </li>
               {NAV_LINKS.slice(0, 3).map((link) => (
                 <li key={link.href}>
                   <Link 
@@ -99,6 +107,14 @@ export default function Footer() {
                   className="text-text-secondary dark:text-medical-slate text-sm font-dmSans hover:text-primary dark:hover:text-primary transition-colors duration-300"
                 >
                   Careers
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/privacy-policy" 
+                  className="text-text-secondary dark:text-medical-slate text-sm font-dmSans hover:text-primary dark:hover:text-primary transition-colors duration-300"
+                >
+                  Privacy Policy
                 </Link>
               </li>
             </ul>

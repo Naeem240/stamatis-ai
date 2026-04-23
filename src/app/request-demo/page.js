@@ -5,6 +5,7 @@ import { METRICS } from "@/app/constants";
 import { useFormSubmit } from "../hooks/useFormSubmit";
 import { motion } from "framer-motion";
 import CountUpNumber from "../components/ui/CountUpNumber";
+import Link from "next/link";
 
 export default function RequestDemoPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -212,7 +213,7 @@ export default function RequestDemoPage() {
               )}
 
               <p className="text-[10px] text-text-tertiary dark:text-medical-slate/50 text-center font-mono">
-                BY SUBMITTING, YOU AGREE TO OUR CLINICAL DATA PRIVACY PROTOCOLS.
+                BY SUBMITTING, YOU AGREE TO OUR CLINICAL DATA <Link href="/privacy-policy" className="underline hover:no-underline">PRIVACY</Link> PROTOCOLS.
               </p>
             </form>
           )}
