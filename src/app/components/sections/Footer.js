@@ -41,9 +41,9 @@ export default function Footer() {
           <motion.div variants={itemVariants} className="md:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-6 hover:opacity-80 transition-opacity">
               
-              <span className="font-playfair text-xl font-bold text-text-primary dark:text-white">
-                STAMATIS<span className="text-primary">.AI</span>
-              </span>
+              <span className="font-playfair text-2xl font-extrabold tracking-tight text-text-primary dark:text-white">
+          STAMATIS<span className="text-[#A67C3D]">.AI</span>
+        </span>
             </Link>
             <p className="text-text-secondary dark:text-medical-slate text-sm max-w-sm leading-relaxed mb-6 font-dmSans">
               Cornerstone Eagle LLC · Texas LLC <br />

@@ -45,7 +45,7 @@ export default function Navbar() {
             priority
           />
         </div> */}
-        <span className="font-playfair text-xl font-bold tracking-tight text-text-primary dark:text-white">
+        <span className="font-playfair text-2xl font-extrabold tracking-tight text-text-primary dark:text-white">
           STAMATIS<span className="text-[#A67C3D]">.AI</span>
         </span>
       </Link>

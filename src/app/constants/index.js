@@ -36,12 +36,12 @@ export const TEAM = [
     img: "/sajed.jpeg"
   },
   // { name: "Muhammad H. Mustafa", role: "Lead ML Engineer", detail: "Built the data lake, LLM encoder, and Vast.ai training pipeline.", img: null },
-  {
-    name: "Dr. Rao K. Ali, MD",
-    role: "Chief Medical Officer",
-    detail: "Board Certified Interventional Pain Specialist. CEO of Premier Pain Centers across 13 Texas locations.",
-    img: null
-  },
+  // {
+  //   name: "Dr. Rao K. Ali, MD",
+  //   role: "Chief Medical Officer",
+  //   detail: "Board Certified Interventional Pain Specialist. CEO of Premier Pain Centers across 13 Texas locations.",
+  //   img: null
+  // },
   {
     name: "Aviraj (Avi) Sinha, PhD",
     role: "Co-Founder & Chief Data Scientist",

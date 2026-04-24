@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${playfair.variable} ${dmSans.variable}`}>
       <body className="antialiased text-text-primary dark:text-white">
         <ThemeProvider>
-          <Preloader />
+          {/* <Preloader /> */}
           <Navbar />
           {children}
           <Footer />
