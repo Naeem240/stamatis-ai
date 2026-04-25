@@ -46,7 +46,7 @@ export const TEAM = [
     name: "Aviraj (Avi) Sinha, PhD",
     role: "Co-Founder & Chief Data Scientist",
     detail: "PhD in AI, machine learning, and quantum computing from Southern Methodist University. Co-inventor of US Patent 19/200,539. Leads the model architecture and validation strategy behind Stamatis.AI’s diagnostic engine — combining classical deep learning with next-generation computational methods to set a new standard for clinical AI performance.",
-    img: null
+    img: "/aviraj.png"
   },
 ];
 

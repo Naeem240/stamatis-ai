@@ -49,6 +49,9 @@ export default function Hero() {
             variants={itemVariants}
             className="flex flex-col items-center sm:flex-row gap-2 mb-8 sm:mb-10"
           >
+            <span className="inline-block w-fit px-3 py-1.5 rounded-full bg-black border border-primary/25 text-[10px] font-bold text-[#C9A94E] uppercase tracking-[0.15em]">
+              ✓ Agentic healthcare intelligence
+            </span>
             <span className="inline-block w-fit px-3 py-1.5 rounded-full bg-primary/12 border border-primary/25 text-[10px] font-bold text-primary uppercase tracking-[0.15em]">
               🔒 Patent Pending US 19/200,539
             </span>
