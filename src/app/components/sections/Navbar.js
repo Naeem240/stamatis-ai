@@ -26,7 +26,7 @@ export default function Navbar() {
 
   return (
     <nav 
-      className={`backdrop-blur-md backdrop-brightness-90 fixed top-0 left-0 right-0 z-[100] transition-all duration-500 px-4 sm:px-8 md:px-16 h-[72px] ${
+      className={`h-[72px] backdrop-blur-md backdrop-brightness-60 fixed top-0 left-0 right-0 z-[100] transition-all duration-500 px-4 sm:px-8 md:px-16 py-2 ${
         scrolled || isOpen
           ? "bg-navy-900/95 dark:bg-navy-900/95 dark:backdrop-blur-md border-b border-surface dark:border-white/10" 
           : "bg-transparent"
@@ -36,17 +36,17 @@ export default function Navbar() {
 
       {/* Brand Logo */}
       <Link href="/" className="flex items-center gap-1 z-[110]">
-        {/* <div className="relative w-10 h-10 transition-transform duration-300 hover:scale-105">
+        <div className="relative w-15 h-15 transition-transform duration-300 hover:scale-105">
           <Image
-            src="/logo.png"
+            src="/stamatis-logo-only.png"
             alt="Stamatis.AI Logo"
             fill
             className="object-contain"
             priority
           />
-        </div> */}
+        </div>
         <span className="font-playfair text-2xl font-extrabold tracking-tight text-text-primary dark:text-white">
-          STAMATIS<span className="text-[#A67C3D]">.AI</span>
+          STAMATIS<span className="text-[#C9A94E]">.AI</span>
         </span>
       </Link>
 
@@ -69,7 +69,7 @@ export default function Navbar() {
         {/* Theme Toggle Button */}
         <button
           onClick={toggleTheme}
-          className="relative inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-navy-800 hover:bg-gray-200 dark:hover:bg-navy-700 transition-all duration-300"
+          className="cursor-pointer relative inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-navy-800 hover:bg-gray-200 dark:hover:bg-navy-700 transition-all duration-300"
           aria-label="Toggle theme"
         >
           <motion.div

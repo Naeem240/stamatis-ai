@@ -39,7 +39,16 @@ export default function Footer() {
           
           {/* Brand Column */}
           <motion.div variants={itemVariants} className="md:col-span-2">
-            <Link href="/" className="flex items-center gap-3 mb-6 hover:opacity-80 transition-opacity">
+            <Link href="/" className="flex items-center gap-1 mb-6 hover:opacity-80 transition-opacity">
+            <div className="relative w-15 h-15 transition-transform duration-300 hover:scale-105">
+          <Image
+            src="/stamatis-logo-only.png"
+            alt="Stamatis.AI Logo"
+            fill
+            className="object-contain"
+            priority
+          />
+        </div>
               
               <span className="font-playfair text-2xl font-extrabold tracking-tight text-text-primary dark:text-white">
           STAMATIS<span className="text-[#A67C3D]">.AI</span>
