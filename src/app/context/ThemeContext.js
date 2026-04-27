@@ -8,11 +8,16 @@ export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState('light');
   const [mounted, setMounted] = useState(false);
 
-  // Initialize theme from localStorage on mount
+  // Initialize theme from localStorage or device preference
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    setTheme(savedTheme);
-    applyTheme(savedTheme);
+    const savedTheme = localStorage.getItem('theme');
+    const isExplicit = localStorage.getItem('themeExplicit') === 'true';
+    const deviceTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    
+    // Only use saved theme if user explicitly chose it
+    const initialTheme = isExplicit ? (savedTheme || deviceTheme) : deviceTheme;
+    setTheme(initialTheme);
+    applyTheme(initialTheme);
     setMounted(true);
   }, []);
 
@@ -31,6 +36,7 @@ export function ThemeProvider({ children }) {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
     localStorage.setItem('theme', newTheme);
+    localStorage.setItem('themeExplicit', 'true'); // Mark as explicit user choice
     applyTheme(newTheme);
   };
 

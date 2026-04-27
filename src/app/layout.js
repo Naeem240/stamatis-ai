@@ -33,7 +33,28 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     // Add the variables to the HTML tag directly
-    <html lang="en" className={`${playfair.variable} ${dmSans.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${dmSans.variable}`} suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var explicit = localStorage.getItem('themeExplicit');
+                  var theme;
+                  if (explicit === 'true') {
+                    theme = localStorage.getItem('theme') || 'light';
+                  } else {
+                    // No explicit choice yet - use device preference
+                    theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                  }
+                  if (theme === 'dark') document.documentElement.classList.add('dark');
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
       <body className="antialiased text-text-primary dark:text-white">
         <ThemeProvider>
           {/* <Preloader /> */}

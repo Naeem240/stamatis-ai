@@ -67,7 +67,7 @@ export default function Navbar() {
         ))}
         
         {/* Theme Toggle Button */}
-        <button
+        {/* <button
           onClick={toggleTheme}
           className="cursor-pointer relative inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-navy-800 hover:bg-gray-200 dark:hover:bg-navy-700 transition-all duration-300"
           aria-label="Toggle theme"
@@ -89,7 +89,7 @@ export default function Navbar() {
             )}
           </motion.div>
         </button>
-        
+         */}
         <Link href="/request-demo" className="px-6 py-3 rounded-lg bg-[#C9A94E] text-black font-bold hover:shadow-lg transition-all duration-300 hover:scale-105">
           Request Demo
         </Link>

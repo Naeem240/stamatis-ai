@@ -141,20 +141,20 @@ export const InvestorPage = () => {
                   <circle cx="200" cy="200" r="130" fill="none" stroke="#4A90D9" strokeWidth="0.5" strokeOpacity="0.35"/>
                   <circle cx="200" cy="200" r="100" fill="none" stroke="#C9A94E" strokeWidth="0.5" strokeOpacity="0.25"/>
                   <circle cx="200" cy="200" r="54" fill="url(#coreGrad)" filter="url(#glow)"/>
-                  <text x="200" y="198" textAnchor="middle" fontFamily="Playfair Display" fontSize="18" fontWeight="700" fill="white">LOCUS</text>
+                  <text x="200" y="198" textAnchor="middle" fontFamily="Playfair Display" fontSize="18" fontWeight="700" fill="var(--text-primary)">LOCUS</text>
                   <text x="200" y="216" textAnchor="middle" fontFamily="DM Sans" fontSize="9" fill="#F0D080">CORE ENGINE</text>
-                  <g fontFamily="DM Sans" fontSize="10" fontWeight="600" fill="#070F1C">
-                    <circle cx="200" cy="60" r="28" fill="white" stroke="#F4A261" strokeWidth="2.5"/>
-                    <text x="200" y="58" textAnchor="middle" fontSize="9">brain</text>
+                  <g fontFamily="DM Sans" fontSize="10" fontWeight="600" fill="var(--text-primary)">
+                    <circle cx="200" cy="60" r="28" fill="var(--bg-surface)" stroke="#F4A261" strokeWidth="2.5"/>
+                    <text x="200" y="58" textAnchor="middle" fontSize="9" fill="var(--text-primary)">brain</text>
                     <text x="200" y="70" textAnchor="middle" fontSize="7" fill="#F4A261" fontWeight="700">LEAD</text>
-                    <circle cx="330" cy="120" r="28" fill="white" stroke="#4A90D9" strokeWidth="1.5"/>
-                    <text x="330" y="124" textAnchor="middle" fontSize="9">heart</text>
-                    <circle cx="330" cy="280" r="28" fill="white" stroke="#4A90D9" strokeWidth="1.5"/>
-                    <text x="330" y="284" textAnchor="middle" fontSize="9">lungs</text>
-                    <circle cx="70" cy="280" r="28" fill="white" stroke="#4A90D9" strokeWidth="1.5"/>
-                    <text x="70" y="284" textAnchor="middle" fontSize="9">liver</text>
-                    <circle cx="70" cy="120" r="28" fill="white" stroke="#4A90D9" strokeWidth="1.5"/>
-                    <text x="70" y="118" textAnchor="middle" fontSize="8">pancreas</text>
+                    <circle cx="330" cy="120" r="28" fill="var(--bg-surface)" stroke="#4A90D9" strokeWidth="1.5"/>
+                    <text x="330" y="124" textAnchor="middle" fontSize="9" fill="var(--text-primary)">heart</text>
+                    <circle cx="330" cy="280" r="28" fill="var(--bg-surface)" stroke="#4A90D9" strokeWidth="1.5"/>
+                    <text x="330" y="284" textAnchor="middle" fontSize="9" fill="var(--text-primary)">lungs</text>
+                    <circle cx="70" cy="280" r="28" fill="var(--bg-surface)" stroke="#4A90D9" strokeWidth="1.5"/>
+                    <text x="70" y="284" textAnchor="middle" fontSize="9" fill="var(--text-primary)">liver</text>
+                    <circle cx="70" cy="120" r="28" fill="var(--bg-surface)" stroke="#4A90D9" strokeWidth="1.5"/>
+                    <text x="70" y="118" textAnchor="middle" fontSize="8" fill="var(--text-primary)">pancreas</text>
                   </g>
                 </svg>
               </div>
