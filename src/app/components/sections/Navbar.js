@@ -98,7 +98,7 @@ export default function Navbar() {
       {/* Mobile Menu Toggle (Hamburger) */}
       <div className="lg:hidden flex items-center gap-4">
         {/* Theme Toggle for Mobile */}
-        <button
+        {/* <button
           onClick={toggleTheme}
           className="p-2 rounded-lg bg-gray-100 dark:bg-navy-800 hover:bg-gray-200 dark:hover:bg-navy-700 transition-all duration-300 text-text-primary dark:text-white"
           aria-label="Toggle theme"
@@ -112,7 +112,7 @@ export default function Navbar() {
               <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
             </svg>
           )}
-        </button>
+        </button> */}
         
         <button 
           className="z-[110] p-2 text-text-primary dark:text-white"
