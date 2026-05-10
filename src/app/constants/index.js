@@ -81,7 +81,7 @@ export const BLOG_POSTS = [
   {
     slug: "detection-vs-diagnosis-matters",
     tag: "Clinical",
-    title: "Detection vs. Diagnosis: Why the Distinction Matters",
+    title: "Detection vs. Diagnosis: Why the Distinction Matter",
     date: "March 2026",
     imagePlaceholder: { bg: "bg-medical-green/10", icon: "🩺" },
   },
