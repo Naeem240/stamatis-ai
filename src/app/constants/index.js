@@ -25,7 +25,7 @@ export const LOCUS_MODULES = [
 export const TEAM = [
   {
     name: "Lucas Lee Stamatis",
-    role: "Chief Executive Officer",
+    role: "Chief Executive Officer.",
     detail: "Serial entrepreneur and SMU-trained finance professional with a track record across private healthcare and pharmacy ventures. Co-inventor of US Patent 19/200,539. Leads Stamatis.AI’s commercial strategy and hospital system partnerships, bringing institutional-grade financial discipline to one of the most capital-intensive sectors in tech.",
     img: "/lucas.png"
   },
