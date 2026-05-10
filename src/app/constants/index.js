@@ -48,6 +48,12 @@ export const TEAM = [
     detail: "PhD in AI, machine learning, and quantum computing from Southern Methodist University. Co-inventor of US Patent 19/200,539. Leads the model architecture and validation strategy behind Stamatis.AI’s diagnostic engine — combining classical deep learning with next-generation computational methods to set a new standard for clinical AI performance.",
     img: "/aviraj.png"
   },
+  {
+    name: "Haseb Mustafa",
+    role: "Co-Founder & Chief Data Scientist",
+    detail: "An experienced Machine Learning Engineer with 4+ years of experience building AI driven solutions across deep learning, generative AI, computer vision, NLP, and scalable machine learning systems. He has a Bachelor’s degree in Computer Science.\n\nHis work includes building production-grade AI applications, intelligent automation platforms, 3D medical imaging pipelines, predictive analytics systems and LLM powered solutions using technologies like Pytorch, Tensorflow, FastAPI and cloud infrastructure. His passion lies in applying state-of-the-art AI research to real-world products, focusing on building scalable and impactful AI systems for modern businesses.",
+    img: "/Haseb.jpeg"
+  },
 ];
 
 export const INVESTOR_STATS = [
